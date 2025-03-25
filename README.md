@@ -24,14 +24,14 @@ The first dataset contains two categories:
 
 
 ---
-## *Part (a)*
+## iii.*Part (a)*
 ### Binary Classification Using Handcrafted Features and ML Classifiers (4 Marks)  
 &nbsp;&nbsp;&nbsp;&nbsp; i. Extract handcrafted features from the dataset.  
 &nbsp;&nbsp;&nbsp;&nbsp; ii. Train and evaluate at least two machine learning classifiers (e.g., SVM, Neural network) to classify faces as *"with mask"* or *"without mask."*  
 &nbsp;&nbsp;&nbsp;&nbsp; iii. Report and compare the accuracy of the classifiers.  
 
 
-### iii. Methodology
+### Methodology
 
 
 - Describe the feature extraction process.  
