@@ -68,7 +68,7 @@ The results indicate that MLP performed better in classifying face masks.
 
 
 ---
-## *Part (b)*
+## iv. *Part (b)*
 
 ### Binary Classification Using CNN (3 Marks) 
 &nbsp;&nbsp;i.	Design and train a Convolutional Neural Network (CNN) to perform binary classification on the same dataset. <br>
