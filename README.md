@@ -275,7 +275,7 @@ The segmentation performance was evaluated using the Dice coefficient, which mea
 
 ## vii. *How to run the files?*<br>
 ## To successfully run this project, ensure you have the following libraries installed in your Python environment.<br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 1.	numpy <br>
+- ### 1.	numpy <br>
 &nbsp;&nbsp;&nbsp;&nbsp; ### 2.	pandas <br>
 &nbsp;&nbsp;&nbsp;&nbsp; ### 3.	pandas <br>
 &nbsp;&nbsp;&nbsp;&nbsp; ### 4.	os<br>
