@@ -20,9 +20,6 @@ We use the first dataset for the questions (a) and (b), and the second dataset f
 The first dataset contains two categories:  
 1. *With Mask:* Images of individuals wearing face masks.  
 2. *Without Mask:* Images of individuals without face masks.  
-
-
-
 ---
 ## iii.*Part (a)*
 ### Binary Classification Using Handcrafted Features and ML Classifiers (4 Marks)  
