@@ -272,6 +272,7 @@ The segmentation performance was evaluated using the Dice coefficient, which mea
 ### The results demonstrate that deep learning-based segmentation significantly outperforms traditional methods. While handcrafted features can provide a quick, interpretable approach, they lack the adaptability and precision offered by neural networks like U-Net.
 
 <br>
+
 ---
 
 ## vii. *How to run the files?*<br>
