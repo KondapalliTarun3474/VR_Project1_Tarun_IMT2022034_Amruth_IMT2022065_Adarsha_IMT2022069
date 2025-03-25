@@ -80,7 +80,7 @@ The results indicate that MLP performed better in classifying face masks.
 
 ## iii. Methodology
 
-&nbsp;&nbsp;1.	Data Preprocessing:<br>
+&nbsp;&nbsp;*1.	Data Preprocessing:*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Images were resized to 64x64 and normalized.<br>
 &nbsp;&nbsp;2.	Model Design:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;A CNN architecture was implemented with three convolutional layers, max-pooling layers, and fully connected layers.<br>
