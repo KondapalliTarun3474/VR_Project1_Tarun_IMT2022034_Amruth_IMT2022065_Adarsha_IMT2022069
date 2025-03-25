@@ -215,20 +215,20 @@ Using this segmentation process the Dice score we achieved is 46.08%, so to impr
 <br>
 
 ---
-### *Part (d):* <br>
-##Mask Segmentation Using U-Net (5 Marks)<br>
+## *Part (d):* <br>
+## Mask Segmentation Using U-Net (5 Marks)<br>
 &nbsp;&nbsp;i. Train a U-Net model for precise segmentation of mask regions in the images.<br>
 &nbsp;&nbsp;ii. Compare the performance of U-Net with the traditional segmentation method using metrics like IoU or Dice score.<br>
 
 
-## iii. Methodology <br>
+##  Methodology <br>
 
-&nbsp;&nbsp;*1.Preprocessing*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;a)	Images are read in RGB format and normalized to the range [0,1].<br>
-&nbsp;&nbsp;&nbsp;&nbsp;b)	Masks are converted to grayscale, resized with nearest-neighbor interpolation, and binarized.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;c)	Data is split into training and testing sets using an 80-20 split.<br>
+### *1.Preprocessing*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a.	Images are read in RGB format and normalized to the range [0,1].<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b.	Masks are converted to grayscale, resized with nearest-neighbor interpolation, and binarized.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;c.	Data is split into training and testing sets using an 80-20 split.<br>
 
-&nbsp;&nbsp;*2.Model Architecture*<br>
+### *2.Model Architecture*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;a.	Backbone: ResNet-50 (pretrained on ImageNet)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;b.	Input shape: (128,128,3)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;c.	Activation function: Sigmoid (for binary segmentation)<br>
@@ -236,82 +236,74 @@ Using this segmentation process the Dice score we achieved is 46.08%, so to impr
 &nbsp;&nbsp;&nbsp;&nbsp;e.	Optimizer: Adam<br>
 &nbsp;&nbsp;&nbsp;&nbsp;f.	Metrics: Accuracy<br>
 <br>
-&nbsp;&nbsp;*3.Training Setup*<br>
+### *3.Training Setup*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;a.	Epochs: 10<br>
 &nbsp;&nbsp;&nbsp;&nbsp;b.	Batch size: 8<br>
 &nbsp;&nbsp;&nbsp;&nbsp;c.	Validation split: 20% of training data<br>
 <br>
-&nbsp;&nbsp;*4. Results and Evaluation*<br>
+### *4. Results and Evaluation*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Quantitative Evaluation<br>
 &nbsp;&nbsp;&nbsp;&nbsp;The U-Net segmentation performance is evaluated using IoU (Intersection over Union) and Dice Coefficient:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;IoU Score: 0.8862<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Dice Score: 0.9329<br>
 
 
+### *5. Observation and analysis*<br>
 
-
-## Comparison of U-Net and Traditional Segmentation<br>
+### Comparison of U-Net and Traditional Segmentation<br>
 The segmentation performance was evaluated using the Dice coefficient, which measures the similarity between the predicted and ground truth masks. A higher Dice score indicates better segmentation accuracy.<br>
-1. Performance Difference<br>
+#### 1. Performance Difference<br>
 &nbsp;&nbsp;•	U-Net achieved a Dice coefficient of 94%, indicating highly accurate segmentation with minimal deviation from ground truth masks.<br>
 &nbsp;&nbsp;•	Traditional segmentation methods scored 46%, showing significantly lower accuracy due to limitations in handling variations in lighting, textures, and complex facial structures.<br>
-2. Strengths of U-Net<br>
+#### 2. Strengths of U-Net<br>
 &nbsp;&nbsp;•	Deep learning-based U-Net effectively captures intricate mask boundaries by leveraging learned hierarchical features.<br>
 &nbsp;&nbsp;•	It generalizes well across diverse images and adapts to variations in illumination and facial features.<br>
 &nbsp;&nbsp;•	U-Net incorporates skip connections, which help retain fine-grained spatial details, leading to precise mask delineation.<br>
-3. Limitations of Traditional Segmentation<br>
+#### 3. Limitations of Traditional Segmentation<br>
 &nbsp;&nbsp;•	Otsu thresholding and edge detection struggle with noisy backgrounds, shadows, and varying face tones.<br>
 &nbsp;&nbsp;•	Handcrafted filters lack adaptability, resulting in over-segmentation or under-segmentation in challenging cases.<br>
 &nbsp;&nbsp;•	Morphological operations improve mask refinement but cannot match the flexibility of a data-driven deep learning approach.
-4. Practical Implications<br>
+#### 4. Practical Implications<br>
 &nbsp;&nbsp;•	U-Net is better suited for real-world applications where accuracy is critical, such as medical imaging or face mask detection.<br>
 &nbsp;&nbsp;•	Traditional methods, while computationally inexpensive, are not robust enough for complex segmentation tasks.<br>
-5. Conclusion<br>
+#### 5. Conclusion<br>
 
-The results demonstrate that deep learning-based segmentation significantly outperforms traditional methods. While handcrafted features can provide a quick, interpretable approach, they lack the adaptability and precision offered by neural networks like U-Net.
+### The results demonstrate that deep learning-based segmentation significantly outperforms traditional methods. While handcrafted features can provide a quick, interpretable approach, they lack the adaptability and precision offered by neural networks like U-Net.
 
 <br>
+---
 
+## vi. *How to run the files?*<br>
+## To successfully run this project, ensure you have the following libraries installed in your Python environment.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 1.	numpy <br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 2.	pandas <br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 3.	pandas <br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 4.	os<br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 5.	opencv-python (cv2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 6.	scikit-image (skimage.feature, skimage.metrics)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 7.	scikit-learn (sklearn)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 8.	tensorflow & keras<br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 9.	 segmentation_models – Pretrained segmentation models (Requires installation)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;### 10.	matplotlib – For plotting results<br>
 
-## *How to run the files?*<br>
-&nbsp;&nbsp;To successfully run this project, ensure you have the following libraries installed in your Python environment.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;1.	numpy <br>
-&nbsp;&nbsp;&nbsp;&nbsp;2.	pandas <br>
-&nbsp;&nbsp;&nbsp;&nbsp;3.	os<br>
-&nbsp;&nbsp;&nbsp;&nbsp;4.	opencv-python (cv2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;5.	scikit-image (skimage.feature, skimage.metrics) – For HOG (Histogram of Oriented Gradients) and SSIM (Structural Similarity Index)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;6.	scikit-learn (sklearn)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	train_test_split – For splitting datasets<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	SVC – Support Vector Classifier<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	MLPClassifier – Multi-layer Perceptron (Neural Network)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	accuracy_score – For model evaluation<br>
-&nbsp;&nbsp;&nbsp;&nbsp;7.	tensorflow & keras – For building and training neural networks<br>
-&nbsp;&nbsp;&nbsp;&nbsp;o	tensorflow.keras.layers – To define model layers<br>
-&nbsp;&nbsp;&nbsp;&nbsp;8.	 segmentation_models – Pretrained segmentation models (Requires installation)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;9.	matplotlib – For plotting results<br>
-
-## *Running questionab.ipynb*<br>
-Before running the notebook, make sure the dataset is stored in the following directory structure:<br>
-Update Dataset Paths<br>
-Modify the dataset paths in the notebook to match your local directory:<br>
-mask_path = "/path/to/dataset/with_mask"<br>
-no_mask_path = "/path/to/dataset/without_mask"<br>
-Replace /path/to/dataset/ with the actual location of your dataset on your computer.<br>
-If you want to run the notebook directly as a Python script without opening Jupyter Notebook.<br>
-Convert the Jupyter Notebook into a Python script and run it:<br>
-&nbsp;&nbsp;jupyter nbconvert --to script questionab.ipynb<br>
-&nbsp;&nbsp;python questionab.py<br>
+## 1. *Running questionab.ipynb*<br>
+### Before running the notebook, make sure the dataset is stored in the following directory structure:<br>
+&nbsp;Modify the dataset paths in the notebook to match your local directory:<br>
+&nbsp;&nbsp;&nbsp;**mask_path = "/path/to/dataset/with_mask"**<br>
+&nbsp;&nbsp;&nbsp;**no_mask_path = "/path/to/dataset/without_mask"**<br>
+&nbsp;Replace **/path/to/dataset/** with the actual location of your dataset on your computer.<br>
+### If you want to run the notebook directly as a Python script without opening Jupyter Notebook, Convert the Jupyter Notebook into a Python script and run it:<br>
+&nbsp;&nbsp;&nbsp;jupyter nbconvert --to script questionab.ipynb<br>
+&nbsp;&nbsp;&nbsp;python questionab.py<br>
 <br>
-## *Running questionab.ipynb*<br>
-Update the paths inside the notebook to reflect your local directory structure:<br>
-input_dir = "/path/to/dataset/MSFD/1/face_crop"<br>
-output_dir = "/path/to/output/segmented_mask"<br>
-ground_truth_dir = "/path/to/dataset/MSFD/1/face_crop_segmentation"<br>
-Replace /path/to/dataset/ with the actual location of your dataset.<br>
-
-## *To run the notebook as a script, first convert it to a Python file:*<br>
-&nbsp;&nbsp;jupyter nbconvert --to script cdquestion.ipynb<br>
-This will create a cdquestion.py file in the same directory.<br>
-Execute the converted Python script from the terminal:<br>
-&nbsp;&nbsp;python cdquestion.py<br>
-This will process the images and save the output in the specified directory.<br>
+## 2. *Running cdquestion.ipynb*<br>
+### Update the paths inside the notebook to reflect your local directory structure:<br>
+&nbsp;&nbsp;**input_dir = "/path/to/dataset/MSFD/1/face_crop"**<br>
+&nbsp;&nbsp;**output_dir = "/path/to/output/segmented_mask"**<br>
+&nbsp;&nbsp;**ground_truth_dir = "/path/to/dataset/MSFD/1/face_crop_segmentation"**<br>
+&nbsp;Replace **/path/to/dataset/** with the actual location of your dataset.<br>
+### If you want to run the notebook directly as a Python script without opening Jupyter Notebook, Convert the Jupyter Notebook into a Python script and run it:<br>
+&nbsp;&nbsp;&nbsp;jupyter nbconvert --to script cdquestion.ipynb<br>
+&nbsp;&nbsp;&nbsp;python cdquestion.py<br>
+## This will process the images and save the output in the specified directory.<br>
+---
