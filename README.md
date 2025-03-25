@@ -208,7 +208,7 @@ Segmented Image<br>
 ![image](https://github.com/user-attachments/assets/67e805a6-36e3-456c-b629-f321dd2d0645)
 
 
- To address this, we calculate the average intensity of the image. If the average intensity exceeds 127, the background is classified as light; otherwise, it is classified as dark. Based on this classification, the appropriate thresholding technique is selected to ensure accurate segmentation.
+ We got an accuracy of 36% when we only used one thresholding type for all the images. To address this, we calculate the average intensity of the image. If the average intensity exceeds 127, the background is classified as light; otherwise, it is classified as dark. Based on this classification, the appropriate thresholding technique is selected to ensure accurate segmentation.
 
  ### *5. Results*<br>
 Using this segmentation process the Dice score we achieved is 46.08%, so to improve this accuracy we use U-Net. The accuracy we achieved using U-Net is and the process is explained below
