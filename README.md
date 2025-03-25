@@ -159,13 +159,13 @@ Overall, CNN demonstrated superior accuracy and generalization, making it a more
 
 ### *1. Segmentation Process* <br>
 The segmentation is performed using the segment_mask function, which applies the following steps <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Grayscale Conversion: The input face image is converted to grayscale. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Intensity Analysis: The mean pixel intensity determines the thresholding approach (binary or inverse binary). <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Gaussian Blurring: A 3x3 Gaussian blur is applied to reduce noise.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Otsu’s Thresholding: Adaptive thresholding is applied to generate a binary mask.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Edge Detection: Canny edge detection is used to highlight boundaries.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Mask Refinement: Morphological closing is performed to refine the segmented mask.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Saving Results: The generated masks are saved in the designated output directory.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**Grayscale Conversion:** The input face image is converted to grayscale. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;**Intensity Analysis:** The mean pixel intensity determines the thresholding approach (binary or inverse binary). <br>
+&nbsp;&nbsp;&nbsp;&nbsp;**Gaussian Blurring:** A 3x3 Gaussian blur is applied to reduce noise.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**Otsu’s Thresholding:** Adaptive thresholding is applied to generate a binary mask.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**Edge Detection:** Canny edge detection is used to highlight boundaries.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*8Mask Refinement:** Morphological closing is performed to refine the segmented mask.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**Saving Results:** The generated masks are saved in the designated output directory.<br>
 
 ![image](https://github.com/user-attachments/assets/fce93a05-d6e9-4f5d-9993-eb76e0673d66)
 
