@@ -296,6 +296,7 @@ The segmentation performance was evaluated using the Dice coefficient, which mea
 - #### jupyter nbconvert --to script questionab.ipynb<br>
 - #### python questionab.py<br>
 <br>
+
 ## 2. *Running cdquestion.ipynb*<br>
 ### a. Update the paths inside the notebook to reflect your local directory structure:<br>
 - #### **input_dir = "/path/to/dataset/MSFD/1/face_crop"**<br>
