@@ -42,7 +42,8 @@ The first dataset contains two categories:
 python
 
 
-![image](https://github.com/user-attachments/assets/453a90c1-239c-4e53-a322-e09843d95584)
+![image](https://github.com/user-attachments/assets/1a06ee5f-9f98-4fe6-a758-1379d970cdbd)
+
 
 
 ### 2. *Model Training:*  
@@ -50,7 +51,8 @@ python
 &nbsp;&nbsp;&nbsp;&nbsp; a. Images were converted to grayscale and resized to *64x64* pixels.  
 &nbsp;&nbsp;&nbsp;&nbsp; b. Histogram of Oriented Gradients (HOG) was used to extract texture-based features.  
 
-![image](https://github.com/user-attachments/assets/c9b471ae-c5e1-460b-b1bb-fb6102afacbb)
+![image](https://github.com/user-attachments/assets/242fbed2-2183-4ce2-92a8-88f2e2687961)
+
 
 The dataset was split into training (80%) and testing (20%) sets.
 
@@ -82,19 +84,22 @@ The results indicate that MLP performed better in classifying face masks.
 &nbsp;&nbsp;&nbsp;&nbsp;A CNN architecture was implemented with three convolutional layers, max-pooling layers, and fully connected layers.<br>
 
 
-![image](https://github.com/user-attachments/assets/d957e274-fce0-431c-816a-88edab5c8c2f)
+![image](https://github.com/user-attachments/assets/3403b636-80e7-4bd1-9b7f-300f4f876f9d)
+
 
 &nbsp;&nbsp;3.	Hyperparameter Experiments:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;We experimented with different hyperparameters to optimize the CNN model. Different values of batch size, learning rate, activation function, and optimizers were tested. The variations included:<br>
 
-![image](https://github.com/user-attachments/assets/a053086c-0d0c-4cdb-a63d-9a9fe462e008)
+![image](https://github.com/user-attachments/assets/1433d153-b372-44d9-a182-15a4ff606112)
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;Since we tested all combinations of these hyperparameters, the total number of experiments conducted was 36 different runs.<br>
 
 &nbsp;&nbsp;4.	Training and Evaluation:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;The CNN model was trained for 10 epochs on the dataset, with validation accuracy recorded for different hyperparameter settings<br>
 
-![image](https://github.com/user-attachments/assets/1efc110e-ef2a-4e6f-ad56-d5ea76125ee1)
+![image](https://github.com/user-attachments/assets/d910aaf4-6e22-40dc-86c5-3a2ede0f08f1)
+
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Here’s a summary of the top results from your CNN hyperparameter experiments:<br>
@@ -107,7 +112,8 @@ All the 36 results are there in the python notebook submitted.<br>
 &nbsp;&nbsp;Final Validation Accuracy: 95.85%<br>
 &nbsp;&nbsp;Final Validation Loss: 0.1243**<br>
 
-![image](https://github.com/user-attachments/assets/43e6cddb-f038-4467-8e7e-3fb17b6eb000)
+![image](https://github.com/user-attachments/assets/4d656cd0-6183-498a-8f1e-cd1778dac06b)
+
 
 Other Notable Results:<br>
 &nbsp;&nbsp;Batch Size: 128, Activation: ReLU, Learning Rate: 0.001, Optimizer: Adam<br>
@@ -182,16 +188,20 @@ The segmentation is performed using the segment_mask function, which applies the
 During the segmentation process, we encountered a challenge where the background of the face crop images varied in intensity—sometimes appearing darker than the face mask and other times lighter. The appropriate thresholding method depends on this variation: cv2.THRESH_BINARY is suitable when the background is lighter, while cv2.THRESH_BINARY_INV is required when the background is darker.<br>
 
 Light Background Image<br>
-![image](https://github.com/user-attachments/assets/3f1f90bc-9ee9-416e-bbe6-918901373481)
+![image](https://github.com/user-attachments/assets/3bf1590a-1b2a-4620-b3c8-483645bd8754)
+
 
 Segmented Image<br>
-![image](https://github.com/user-attachments/assets/931a6fc8-72c6-42a2-a53e-7534de0d1ca5)
+![image](https://github.com/user-attachments/assets/45ef9b98-7e41-485d-997d-f4acb633111b)
+
 
 Dark Background Image<br>
-![image](https://github.com/user-attachments/assets/4dbf4d7b-0479-47db-87fa-8e5a84177503)
+![image](https://github.com/user-attachments/assets/03767cf9-4eec-4471-a900-091f197faa26)
+
 
 Segmented Image<br>
-![image](https://github.com/user-attachments/assets/0653cfc2-125d-4539-87b7-9cdc6d7c9d6a)
+![image](https://github.com/user-attachments/assets/67e805a6-36e3-456c-b629-f321dd2d0645)
+
 
  To address this, we calculate the average intensity of the image. If the average intensity exceeds 127, the background is classified as light; otherwise, it is classified as dark. Based on this classification, the appropriate thresholding technique is selected to ensure accurate segmentation.
 Using this segmentation process the Dice score we achieved is 47.79%, so to improve this accuracy we use U-Net. The accuracy we achieved using U-Net is and the process is explained below
