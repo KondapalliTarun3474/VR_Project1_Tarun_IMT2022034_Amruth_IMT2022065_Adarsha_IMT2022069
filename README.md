@@ -109,7 +109,7 @@ The results indicate that MLP performed better in classifying face masks.
 
 ## iv. Results:<br>
 All the 36 results are there in the python notebook submitted.<br>
-**Best Performing Model:<br>
+Best Performing Model:<br>
 &nbsp;&nbsp;Batch Size: 32, Activation: ReLU, Learning Rate: 0.001, Optimizer: Adam<br>
 &nbsp;&nbsp;Final Training Accuracy: 97.89%<br>
 &nbsp;&nbsp;Final Validation Accuracy: 95.85%<br>
@@ -130,11 +130,13 @@ Worst Performing Model:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Accuracy: 54.00%<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Loss: 0.6924<br>
 
+## v. Observation and Analysis
+
 The Adam optimizer with a learning rate of 0.001 consistently yielded the best results. ReLU and Leaky ReLU both performed well, but ReLU with Adam at 0.001 LR showed the highest accuracy. On the other hand, models trained with SGD and low learning rates performed significantly worse.
 Adam outperformed SGD because it adapts the learning rate for each parameter using moment estimates, enabling faster convergence and better handling of complex loss surfaces. It efficiently adjusts updates based on past gradients, making it more suitable for deep networks. In contrast, SGD with a fixed learning rate struggles with slow convergence and can get stuck in local minima, leading to suboptimal performance, especially in non-convex problems like CNN training. Even the best performance of SGD stopped at 0.83, highlighting its limitations in reaching higher accuracy compared to Adam.
 
 
-## v. Comparison of CNN Performance with ML Classifiers
+#Comparison of CNN Performance with ML Classifiers
 
 
 The CNN-based model slightly outperformed traditional ML classifiers in face mask classification. The key comparisons are:
