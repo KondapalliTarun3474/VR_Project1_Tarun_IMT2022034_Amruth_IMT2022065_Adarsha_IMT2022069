@@ -10,7 +10,6 @@ This project aims to develop a computer vision solution for classifying and segm
 
 ## ii. Dataset
 
-## Dataset
 The dataset consists of labeled images of individuals with and without face masks. It is sourced from:  
 
 1. [Face Mask Detection Dataset](https://github.com/chandrikadeb7/Face-Mask-Detection/tree/master/dataset) for classification tasks.  
