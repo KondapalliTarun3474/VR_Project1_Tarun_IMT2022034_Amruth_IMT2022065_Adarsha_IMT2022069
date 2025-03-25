@@ -276,15 +276,15 @@ The segmentation performance was evaluated using the Dice coefficient, which mea
 ## vii. *How to run the files?*<br>
 ## To successfully run this project, ensure you have the following libraries installed in your Python environment.<br>
 - ### 1.	numpy <br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 2.	pandas <br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 3.	pandas <br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 4.	os<br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 5.	opencv-python (cv2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 6.	scikit-image (skimage.feature, skimage.metrics)<br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 7.	scikit-learn (sklearn)<br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 8.	tensorflow & keras<br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 9.	 segmentation_models – Pretrained segmentation models (Requires installation)<br>
-&nbsp;&nbsp;&nbsp;&nbsp; ### 10.	matplotlib – For plotting results<br>
+- ### 2.	pandas <br>
+- ### 3.	pandas <br>
+- ### 4.	os<br>
+= ### 5.	opencv-python (cv2) <br>
+- ### 6.	scikit-image (skimage.feature, skimage.metrics)<br>
+- ### 7.	scikit-learn (sklearn)<br>
+= ### 8.	tensorflow & keras<br>
+= ### 9.	 segmentation_models – Pretrained segmentation models (Requires installation)<br>
+= ### 10.	matplotlib – For plotting results<br>
 
 ## 1. *Running questionab.ipynb*<br>
 ### a. Before running the notebook, make sure the dataset is stored in the following directory structure:<br>
