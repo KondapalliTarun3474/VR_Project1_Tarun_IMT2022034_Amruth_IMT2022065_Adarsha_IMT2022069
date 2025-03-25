@@ -1,5 +1,8 @@
 # Face Mask Detection, Classification, and Segmentation
 
+## Author: K. S. Tarun , Amruth Gadepalli, Kadimetla Adarsha Reddy 
+**Student ID:** IMT2022034, iMT2022065, IMT2022069   
+
 ## i. Introduction
 This project aims to develop a computer vision solution for classifying and segmenting face masks in images. It involves both traditional machine learning methods and deep learning techniques to analyze the presence of face masks and segment mask regions. The tasks include feature extraction, classification using machine learning models, training a CNN for classification, and segmentation using both traditional and deep learning-based methods.
 
