@@ -28,14 +28,14 @@ The first dataset contains two categories:
 &nbsp;&nbsp;&nbsp;&nbsp; iii. Report and compare the accuracy of the classifiers.  
 
 
-### Methodology
+## Methodology
 
 
 - Describe the feature extraction process.  
 - Mention the machine learning classifiers used (e.g., SVM, Neural Network).  
 - Steps for training and evaluating the classifiers.
 
-#### 1. *Feature Extraction:*  
+### 1. *Feature Extraction:*  
 &nbsp;&nbsp;&nbsp;&nbsp; a. *Support Vector Machine* (SVM) with a linear kernel.
 &nbsp;&nbsp;&nbsp;&nbsp; b. *Multilayer Perceptron*(MLP) with two hidden layers (128 and 64 neurons) and a maximum of 500 iterations.
 python
@@ -45,7 +45,7 @@ python
 
 
 
-#### 2. *Model Training:*  
+### 2. *Model Training:*  
 
 &nbsp;&nbsp;&nbsp;&nbsp; a. Images were converted to grayscale and resized to *64x64* pixels.  
 &nbsp;&nbsp;&nbsp;&nbsp; b. Histogram of Oriented Gradients (HOG) was used to extract texture-based features.  
@@ -55,11 +55,11 @@ python
 
 The dataset was split into training (80%) and testing (20%) sets.
 
-#### 3. *Evaluation:*  
+### 3. *Evaluation:*  
 
 Accuracy scores were used to compare the performance of both classifiers.
 
-#### 4. *Results* (Model Accuracy):  
+### 4. *Results* (Model Accuracy):  
 *SVM:*	0.88  
 *MLP:*	0.92  
 The results indicate that MLP performed better in classifying face masks.
@@ -75,18 +75,18 @@ The results indicate that MLP performed better in classifying face masks.
 &nbsp;&nbsp;ii. Try a few hyper-parameter variations (e.g., learning rate, batch size, optimizer, activation function in the classification layer) and report the results. <br>
 &nbsp;&nbsp;iii. Compare the CNN's performance with the ML classifiers.<br>
 
-### *iii. Methodology*
+## *iii. Methodology*
 
-#### *1.	Data Preprocessing:*<br>
+### *1.	Data Preprocessing:*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Images were resized to 64x64 and normalized.<br>
-#### *2.	Model Design:*<br>
+### *2.	Model Design:*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;A CNN architecture was implemented with three convolutional layers, max-pooling layers, and fully connected layers.<br>
 
 
 ![image](https://github.com/user-attachments/assets/3403b636-80e7-4bd1-9b7f-300f4f876f9d)
 
 
-#### *3.	Hyperparameter Experiments:*<br>
+### *3.	Hyperparameter Experiments:*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;We experimented with different hyperparameters to optimize the CNN model. Different values of batch size, learning rate, activation function, and optimizers were tested. The variations included:<br>
 
 ![image](https://github.com/user-attachments/assets/1433d153-b372-44d9-a182-15a4ff606112)
@@ -94,7 +94,7 @@ The results indicate that MLP performed better in classifying face masks.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Since we tested all combinations of these hyperparameters, the total number of experiments conducted was 36 different runs.<br>
 
-#### *4.	Training and Evaluation:*<br>
+### *4.	Training and Evaluation:*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;The CNN model was trained for 10 epochs on the dataset, with validation accuracy recorded for different hyperparameter settings<br>
 
 ![image](https://github.com/user-attachments/assets/d910aaf4-6e22-40dc-86c5-3a2ede0f08f1)
@@ -103,9 +103,9 @@ The results indicate that MLP performed better in classifying face masks.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Here’s a summary of the top results from your CNN hyperparameter experiments:<br>
 
-#### *iv. Results:*<br>
+### *iv. Results:*<br>
 All the 36 results are there in the python notebook submitted.<br>
-#####*Best Performing Model:*<br>
+### *Best Performing Model:*<br>
 &nbsp;&nbsp;Batch Size: 32, Activation: ReLU, Learning Rate: 0.001, Optimizer: Adam<br>
 &nbsp;&nbsp;Final Training Accuracy: 97.89%<br>
 &nbsp;&nbsp;Final Validation Accuracy: 95.85%<br>
@@ -114,41 +114,39 @@ All the 36 results are there in the python notebook submitted.<br>
 ![image](https://github.com/user-attachments/assets/4d656cd0-6183-498a-8f1e-cd1778dac06b)
 
 
-##### *Other Notable Results:*<br>
+### *Other Notable Results:*<br>
 &nbsp;&nbsp;Batch Size: 128, Activation: ReLU, Learning Rate: 0.001, Optimizer: Adam<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Accuracy: 95.85%<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Loss: 0.1440<br>
 &nbsp;&nbsp;Batch Size: 64, Activation: Leaky ReLU, Learning Rate: 0.0001, Optimizer: Adam<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Accuracy: 92.64%<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Loss: 0.2106<br>
-##### *Worst Performing Model:*<br>
+### *Worst Performing Model:*<br>
 &nbsp;&nbsp;Batch Size: 32, Activation: ReLU, Learning Rate: 0.0001, Optimizer: SGD<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Accuracy: 54.00%<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Loss: 0.6924<br>
 
-#### *v. Observation and Analysis*
+### *v. Observation and Analysis*
 
 The Adam optimizer with a learning rate of 0.001 consistently yielded the best results. ReLU and Leaky ReLU both performed well, but ReLU with Adam at 0.001 LR showed the highest accuracy. On the other hand, models trained with SGD and low learning rates performed significantly worse.
 Adam outperformed SGD because it adapts the learning rate for each parameter using moment estimates, enabling faster convergence and better handling of complex loss surfaces. It efficiently adjusts updates based on past gradients, making it more suitable for deep networks. In contrast, SGD with a fixed learning rate struggles with slow convergence and can get stuck in local minima, leading to suboptimal performance, especially in non-convex problems like CNN training. Even the best performance of SGD stopped at 0.83, highlighting its limitations in reaching higher accuracy compared to Adam.
 
 
-##### Comparison of CNN Performance with ML Classifiers
+### Comparison of CNN Performance with ML Classifiers
 
 
 The CNN-based model slightly outperformed traditional ML classifiers in face mask classification. The key comparisons are:
-1.	Feature Extraction:
+#### 1.	Feature Extraction:
 ML classifiers relied on handcrafted features which may not fully capture complex facial mask patterns.
 CNN learned hierarchical features automatically, making it more robust to variations in mask shape, lighting, and occlusions.
 
-2.	Classification Accuracy:
+#### 2.	Classification Accuracy:
 &nbsp;&nbsp;The best ML classifier achieved an accuracy of 92% (mention exact value).
 &nbsp;&nbsp;The CNN model achieved 96%, demonstrating a substantial improvement due to its ability to learn rich feature representations.
-3.	Computational Complexity:
+#### 3.	Computational Complexity:
 &nbsp;&nbsp;ML classifiers were lightweight and required minimal computational resources.
 &nbsp;&nbsp;CNN, while computationally expensive, leveraged GPUs for efficient training and inference.
 Overall, CNN demonstrated superior accuracy and generalization, making it a more effective approach for face mask classification compared to traditional ML classifiers
-
-
 
 ---
 ### *Part (c)*
