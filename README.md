@@ -75,7 +75,7 @@ The results indicate that MLP performed better in classifying face masks.
 &nbsp;&nbsp;ii. Try a few hyper-parameter variations (e.g., learning rate, batch size, optimizer, activation function in the classification layer) and report the results. <br>
 &nbsp;&nbsp;iii. Compare the CNN's performance with the ML classifiers.<br>
 
-## *iii. Methodology*
+## *Methodology*
 
 ### *1.	Data Preprocessing:*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Images were resized to 64x64 and normalized.<br>
@@ -103,7 +103,7 @@ The results indicate that MLP performed better in classifying face masks.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Here’s a summary of the top results from your CNN hyperparameter experiments:<br>
 
-### *iv. Results:*<br>
+### *5. Results:*<br>
 All the 36 results are there in the python notebook submitted.<br>
 ### *Best Performing Model:*<br>
 &nbsp;&nbsp;Batch Size: 32, Activation: ReLU, Learning Rate: 0.001, Optimizer: Adam<br>
@@ -126,7 +126,7 @@ All the 36 results are there in the python notebook submitted.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Accuracy: 54.00%<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Final Validation Loss: 0.6924<br>
 
-### *v. Observation and Analysis*
+### *6. Observation and Analysis*
 
 The Adam optimizer with a learning rate of 0.001 consistently yielded the best results. ReLU and Leaky ReLU both performed well, but ReLU with Adam at 0.001 LR showed the highest accuracy. On the other hand, models trained with SGD and low learning rates performed significantly worse.
 Adam outperformed SGD because it adapts the learning rate for each parameter using moment estimates, enabling faster convergence and better handling of complex loss surfaces. It efficiently adjusts updates based on past gradients, making it more suitable for deep networks. In contrast, SGD with a fixed learning rate struggles with slow convergence and can get stuck in local minima, leading to suboptimal performance, especially in non-convex problems like CNN training. Even the best performance of SGD stopped at 0.83, highlighting its limitations in reaching higher accuracy compared to Adam.
@@ -149,15 +149,15 @@ CNN learned hierarchical features automatically, making it more robust to variat
 Overall, CNN demonstrated superior accuracy and generalization, making it a more effective approach for face mask classification compared to traditional ML classifiers
 
 ---
-### *Part (c)*
+## v. *Part (c)*
 ### Region Segmentation Using Traditional Techniques (3 Marks)  <br>
 &nbsp;&nbsp;i. Implement a region-based segmentation method (e.g., thresholding, edge detection) to segment the mask regions for faces identified as "with mask."  <br>
 &nbsp;&nbsp;ii. Visualize and evaluate the segmentation results. <br>
 
 
-## iii. Methodology <br>
+##  Methodology <br>
 
-&nbsp;&nbsp;1. Segmentation Process <br>
+### *1. Segmentation Process* <br>
 The segmentation is performed using the segment_mask function, which applies the following steps <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Grayscale Conversion: The input face image is converted to grayscale. <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Intensity Analysis: The mean pixel intensity determines the thresholding approach (binary or inverse binary). <br>
@@ -167,22 +167,28 @@ The segmentation is performed using the segment_mask function, which applies the
 &nbsp;&nbsp;&nbsp;&nbsp;Mask Refinement: Morphological closing is performed to refine the segmented mask.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Saving Results: The generated masks are saved in the designated output directory.<br>
 
-## 2. Dice Coefficient Calculation<br>
+![image](https://github.com/user-attachments/assets/fce93a05-d6e9-4f5d-9993-eb76e0673d66)
 
-&nbsp;&nbsp;To evaluate segmentation accuracy, the Dice coefficient is computed, measuring the overlap between the segmented output and the ground truth mask.<br>
+
+### *2. Dice Coefficient Calculation*<br>
+
+To evaluate segmentation accuracy, the Dice coefficient is computed, measuring the overlap between the segmented output and the ground truth mask.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Resizing Masks: The predicted mask is resized to match the ground truth dimensions.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Binarization: Thresholding ensures binary mask representation.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Intersection Calculation: The logical AND operation finds overlapping pixels.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Dice Score Computation: The Dice coefficient formula is applied.<br>
 
-## 3. Implementation Details<br>
+![image](https://github.com/user-attachments/assets/500e38f6-746d-40a6-8176-7fbc5b0005ee)
+
+
+### *3. Implementation Details*<br>
 •	Input Data: The images are loaded from input_dir.<br>
 •	Processing Pipeline: The segmentation function is applied to all images in the directory.<br>
 •	Output Storage: The processed masks are saved in output_dir.<br>
 •	Evaluation: The segmented results are compared against ground_truth_dir.<br>
 •	Error Handling: If an image fails to load, it is skipped with a warning message.<br>
 
-## 4. Results and Analysis<br>
+### *4. Obseravtion and Analysis*<br>
 
 During the segmentation process, we encountered a challenge where the background of the face crop images varied in intensity—sometimes appearing darker than the face mask and other times lighter. The appropriate thresholding method depends on this variation: cv2.THRESH_BINARY is suitable when the background is lighter, while cv2.THRESH_BINARY_INV is required when the background is darker.<br>
 
@@ -203,7 +209,9 @@ Segmented Image<br>
 
 
  To address this, we calculate the average intensity of the image. If the average intensity exceeds 127, the background is classified as light; otherwise, it is classified as dark. Based on this classification, the appropriate thresholding technique is selected to ensure accurate segmentation.
-Using this segmentation process the Dice score we achieved is 47.79%, so to improve this accuracy we use U-Net. The accuracy we achieved using U-Net is and the process is explained below
+
+ ### *5. Results*<br>
+Using this segmentation process the Dice score we achieved is 46.08%, so to improve this accuracy we use U-Net. The accuracy we achieved using U-Net is and the process is explained below
 <br>
 
 ---
