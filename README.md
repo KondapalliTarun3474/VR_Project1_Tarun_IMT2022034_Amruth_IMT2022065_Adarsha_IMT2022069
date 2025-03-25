@@ -215,7 +215,7 @@ Using this segmentation process the Dice score we achieved is 46.08%, so to impr
 <br>
 
 ---
-## *Part (d):* <br>
+## vi. *Part (d):* <br>
 ## Mask Segmentation Using U-Net (5 Marks)<br>
 &nbsp;&nbsp;i. Train a U-Net model for precise segmentation of mask regions in the images.<br>
 &nbsp;&nbsp;ii. Compare the performance of U-Net with the traditional segmentation method using metrics like IoU or Dice score.<br>
@@ -273,7 +273,7 @@ The segmentation performance was evaluated using the Dice coefficient, which mea
 <br>
 ---
 
-## vi. *How to run the files?*<br>
+## vii. *How to run the files?*<br>
 ## To successfully run this project, ensure you have the following libraries installed in your Python environment.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;### 1.	numpy <br>
 &nbsp;&nbsp;&nbsp;&nbsp;### 2.	pandas <br>
@@ -287,22 +287,22 @@ The segmentation performance was evaluated using the Dice coefficient, which mea
 &nbsp;&nbsp;&nbsp;&nbsp;### 10.	matplotlib – For plotting results<br>
 
 ## 1. *Running questionab.ipynb*<br>
-### Before running the notebook, make sure the dataset is stored in the following directory structure:<br>
+### a. Before running the notebook, make sure the dataset is stored in the following directory structure:<br>
 &nbsp;Modify the dataset paths in the notebook to match your local directory:<br>
 &nbsp;&nbsp;&nbsp;**mask_path = "/path/to/dataset/with_mask"**<br>
 &nbsp;&nbsp;&nbsp;**no_mask_path = "/path/to/dataset/without_mask"**<br>
 &nbsp;Replace **/path/to/dataset/** with the actual location of your dataset on your computer.<br>
-### If you want to run the notebook directly as a Python script without opening Jupyter Notebook, Convert the Jupyter Notebook into a Python script and run it:<br>
+### b. If you want to run the notebook directly as a Python script without opening Jupyter Notebook, Convert the Jupyter Notebook into a Python script and run it:<br>
 &nbsp;&nbsp;&nbsp;jupyter nbconvert --to script questionab.ipynb<br>
 &nbsp;&nbsp;&nbsp;python questionab.py<br>
 <br>
 ## 2. *Running cdquestion.ipynb*<br>
-### Update the paths inside the notebook to reflect your local directory structure:<br>
+### a. Update the paths inside the notebook to reflect your local directory structure:<br>
 &nbsp;&nbsp;**input_dir = "/path/to/dataset/MSFD/1/face_crop"**<br>
 &nbsp;&nbsp;**output_dir = "/path/to/output/segmented_mask"**<br>
 &nbsp;&nbsp;**ground_truth_dir = "/path/to/dataset/MSFD/1/face_crop_segmentation"**<br>
 &nbsp;Replace **/path/to/dataset/** with the actual location of your dataset.<br>
-### If you want to run the notebook directly as a Python script without opening Jupyter Notebook, Convert the Jupyter Notebook into a Python script and run it:<br>
+### b. If you want to run the notebook directly as a Python script without opening Jupyter Notebook, Convert the Jupyter Notebook into a Python script and run it:<br>
 &nbsp;&nbsp;&nbsp;jupyter nbconvert --to script cdquestion.ipynb<br>
 &nbsp;&nbsp;&nbsp;python cdquestion.py<br>
 ## This will process the images and save the output in the specified directory.<br>
