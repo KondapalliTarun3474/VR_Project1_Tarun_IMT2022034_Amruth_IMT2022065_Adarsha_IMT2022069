@@ -215,6 +215,7 @@ Using this segmentation process the Dice score we achieved is 46.08%, so to impr
 <br>
 
 ---
+
 ## vi. *Part (d):* <br>
 ## Mask Segmentation Using U-Net (5 Marks)<br>
 &nbsp;&nbsp;i. Train a U-Net model for precise segmentation of mask regions in the images.<br>
