@@ -246,7 +246,7 @@ Using this segmentation process the Dice score we achieved is 47.79%, so to impr
 
 
 
-##Comparison of U-Net and Traditional Segmentation<br>
+## Comparison of U-Net and Traditional Segmentation<br>
 The segmentation performance was evaluated using the Dice coefficient, which measures the similarity between the predicted and ground truth masks. A higher Dice score indicates better segmentation accuracy.<br>
 1. Performance Difference<br>
 &nbsp;&nbsp;•	U-Net achieved a Dice coefficient of 94%, indicating highly accurate segmentation with minimal deviation from ground truth masks.<br>
@@ -269,7 +269,7 @@ The results demonstrate that deep learning-based segmentation significantly outp
 <br>
 
 
-###*How to run the files?*<br>
+## *How to run the files?*<br>
 &nbsp;&nbsp;To successfully run this project, ensure you have the following libraries installed in your Python environment.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;1.	numpy <br>
 &nbsp;&nbsp;&nbsp;&nbsp;2.	pandas <br>
@@ -286,7 +286,7 @@ The results demonstrate that deep learning-based segmentation significantly outp
 &nbsp;&nbsp;&nbsp;&nbsp;8.	 segmentation_models – Pretrained segmentation models (Requires installation)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;9.	matplotlib – For plotting results<br>
 
-### *Running questionab.ipynb*<br>
+## *Running questionab.ipynb*<br>
 Before running the notebook, make sure the dataset is stored in the following directory structure:<br>
 Update Dataset Paths<br>
 Modify the dataset paths in the notebook to match your local directory:<br>
@@ -298,14 +298,14 @@ Convert the Jupyter Notebook into a Python script and run it:<br>
 &nbsp;&nbsp;jupyter nbconvert --to script questionab.ipynb<br>
 &nbsp;&nbsp;python questionab.py<br>
 <br>
-### *Running questionab.ipynb*<br>
+## *Running questionab.ipynb*<br>
 Update the paths inside the notebook to reflect your local directory structure:<br>
 input_dir = "/path/to/dataset/MSFD/1/face_crop"<br>
 output_dir = "/path/to/output/segmented_mask"<br>
 ground_truth_dir = "/path/to/dataset/MSFD/1/face_crop_segmentation"<br>
 Replace /path/to/dataset/ with the actual location of your dataset.<br>
 
-### *To run the notebook as a script, first convert it to a Python file:*<br>
+## *To run the notebook as a script, first convert it to a Python file:*<br>
 &nbsp;&nbsp;jupyter nbconvert --to script cdquestion.ipynb<br>
 This will create a cdquestion.py file in the same directory.<br>
 Execute the converted Python script from the terminal:<br>
