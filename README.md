@@ -136,7 +136,7 @@ The Adam optimizer with a learning rate of 0.001 consistently yielded the best r
 Adam outperformed SGD because it adapts the learning rate for each parameter using moment estimates, enabling faster convergence and better handling of complex loss surfaces. It efficiently adjusts updates based on past gradients, making it more suitable for deep networks. In contrast, SGD with a fixed learning rate struggles with slow convergence and can get stuck in local minima, leading to suboptimal performance, especially in non-convex problems like CNN training. Even the best performance of SGD stopped at 0.83, highlighting its limitations in reaching higher accuracy compared to Adam.
 
 
-##Comparison of CNN Performance with ML Classifiers##
+**Comparison of CNN Performance with ML Classifiers**
 
 
 The CNN-based model slightly outperformed traditional ML classifiers in face mask classification. The key comparisons are:
