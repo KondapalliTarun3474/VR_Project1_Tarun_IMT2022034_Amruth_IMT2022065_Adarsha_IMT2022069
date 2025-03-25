@@ -75,7 +75,7 @@ The results indicate that MLP performed better in classifying face masks.
 &nbsp;&nbsp;ii. Try a few hyper-parameter variations (e.g., learning rate, batch size, optimizer, activation function in the classification layer) and report the results. <br>
 &nbsp;&nbsp;iii. Compare the CNN's performance with the ML classifiers.<br>
 
-###*iii. Methodology*
+### *iii. Methodology*
 
 ####*1.	Data Preprocessing:*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Images were resized to 64x64 and normalized.<br>
